@@ -1,7 +1,5 @@
 # rock-paper-scissor-game  
 
-
-
 import random
 
 user_choice = int(input('what you wanna choose 0=rock,1=paper,2=scissor: \n'))
@@ -32,7 +30,7 @@ elif computer_choice == 1:
 '''
   ''')  
 ''')
-else:
+elif computer_choice == 2:
   print(''' 
    _______
 ---'   ____)____
@@ -43,6 +41,7 @@ else:
 '''
   
   ''') ''')
+
  
  
 
@@ -70,7 +69,7 @@ elif user_choice == 1:
 '''
   ''')  
 ''')
-else:
+elif user_choice == 2:
   print(''' 
    _______
 ---'   ____)____
@@ -81,6 +80,8 @@ else:
 '''
   
   ''') ''')
+else:
+  print(f'{user_choice} out of range')
   
 if user_choice == computer_choice :
   print('draw')
@@ -94,5 +95,8 @@ elif user_choice == 1 and computer_choice == 0:
   print('you win')
 elif user_choice == 2 and computer_choice == 1:
   print('you win')
-else :
+elif user_choice == 2 and computer_choice == 0:
   print('you lose')
+else:
+  print('game over! \nseriously bro! range is 0 to 1 you know the rules,give it another try')
+  
