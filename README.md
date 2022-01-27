@@ -1,17 +1,18 @@
 # rock-paper-scissor-game  
 
 
+
 import random
 
-win=int(input('what you wanna choose 0=rock,1=paper,2=scissor: \n'))
-pin=random.randint(0,2)
+user_choice = int(input('what you wanna choose 0=rock,1=paper,2=scissor: \n'))
+computer_choice = random.randint(0,2)
 
 
 print('computer\'s choice:') 
 
 
 
-if pin==0:
+if computer_choice == 0:
   print('''
    _______
 ---'   ____)
@@ -20,7 +21,7 @@ if pin==0:
       (____)
 ---.__(___)
 ''')
-elif pin==1:
+elif computer_choice == 1:
   print('''
   _______
 ---'   ____)____
@@ -49,7 +50,7 @@ print('you chose:')
 
 
 
-if win==0:
+if user_choice == 0:
   print('''
    _______
 ---'   ____)
@@ -58,7 +59,7 @@ if win==0:
       (____)
 ---.__(___)
 ''')
-elif win==1:
+elif user_choice == 1:
   print('''
   _______
 ---'   ____)____
@@ -81,19 +82,17 @@ else:
   
   ''') ''')
   
-if win==pin:
+if user_choice == computer_choice :
   print('draw')
-elif win==0 and pin==2:
+elif user_choice == 0 and computer_choice == 2:
   print('you win')
-elif win==0 and pin==1:
+elif user_choice == 0 and computer_choice == 1:
   print('you lose')
-elif win==1 and pin==2:
+elif user_choice == 1 and computer_choice == 2:
   print('you lose')
-elif win==1 and pin==0:
+elif user_choice == 1 and computer_choice == 0:
   print('you win')
-elif win==2 and pin==1:
+elif user_choice == 2 and computer_choice == 1:
   print('you win')
 else :
   print('you lose')
-
-  
